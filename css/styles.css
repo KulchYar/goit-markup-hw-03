@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #434455;
   background: #ffffff;
 }
@@ -23,9 +23,13 @@ p {
 
 ul {
   list-style-type: none;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
 }
 
 .link {
@@ -45,12 +49,25 @@ ul {
   outline: 2px solid red;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /** ---------------------HEADER------------------ */
 .header {
   padding: 24px 0;
 }
 
-.header-container{
+.header-container {
   display: flex;
 }
 
@@ -60,14 +77,13 @@ ul {
   justify-content: space-between;
 }
 .header-logo {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--second-color);
-  
 }
 
 .header-logo-part {
@@ -117,13 +133,12 @@ ul {
 
 /** ---------------------HERO------------------ */
 
-
 .hero {
   background-color: var(--main-color);
 }
 
-.hero-container{
-  padding: 188px 472px 292px 472px;
+.hero-container {
+  padding: 188px 0 188px 0;
 }
 
 .hero-title {
@@ -133,15 +148,14 @@ ul {
   text-align: center;
   letter-spacing: 0.02em;
   color: #ffffff;
-  width: 496px;
+  margin-bottom: 48px;
+  max-width: 496px;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 48px;
-  
 }
 
 .hero-btn {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -150,6 +164,13 @@ ul {
   color: #ffffff;
   background: var(--second-color);
   cursor: pointer;
+  display: flex;
+  padding: 16px 32px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
 }
 
 .hero-btn:hover,
@@ -162,10 +183,17 @@ ul {
 .benefits {
 }
 
+.benefits-container {
+  padding: 120px 0 120px 0;
+}
+
 .benefits-list {
+  display: flex;
+  gap: 24px;
 }
 
 .benefits-list-item {
+  width: calc((100% - 72px) / 4);
 }
 
 .benefits-list-subtitle {
@@ -174,6 +202,7 @@ ul {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--main-color);
+  margin-bottom: 8px;
 }
 
 .benefits-list-text {
@@ -187,6 +216,11 @@ ul {
 .task {
 }
 
+.task-container {
+  padding-bottom: 120px;
+  margin-bottom: 120px;
+}
+
 .task-title {
   font-weight: 700;
   font-size: 36px;
@@ -195,18 +229,25 @@ ul {
   text-align: center;
   text-transform: capitalize;
   color: var(--main-color);
+  margin-bottom: 72px;
 }
 
 .task-list {
+  display: flex;
+  gap: 24px;
 }
 
 .task-item-list {
+  width: calc((100% - 48px) / 3);
 }
 
 /** ---------------------TEAM------------------ */
 
 .team {
   background-color: #f4f4fd;
+}
+
+.team-container {
 }
 
 .team-title {
@@ -217,14 +258,23 @@ ul {
   text-align: center;
   text-transform: capitalize;
   color: var(--main-color);
+  padding-top: 120px;
+  padding-bottom: 72px;
 }
 
 .team-list {
+  display: flex;
+  gap: 24px;
+  background: #FFFFFF;
+box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+border-radius: 0px 0px 4px 4px;
 }
 
 .team-list-item {
-  background-color: #ffffff;
+  background-color:
+  width: calc((100% - 24px * 3) / 4);
 }
+
 
 .team-list-subtitle {
   font-weight: 500;
@@ -232,6 +282,8 @@ ul {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--main-color);
+  margin-top: 32px;
+  margin-bottom: 8px;
 }
 
 .team-list-text {
@@ -239,6 +291,7 @@ ul {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  margin-bottom: 32px;
 }
 
 /** ---------------------FOOTER------------------ */
@@ -248,7 +301,7 @@ ul {
 }
 
 .footer-logo {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
